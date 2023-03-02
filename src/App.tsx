@@ -1,16 +1,20 @@
 import './App.css';
-import { interfaces, dataclasses, Metaport } from '@skalenetwork/metaport';
-import { handleEvent} from './events';
+import {Metaport } from '@skalenetwork/metaport';
 import { useEffect, useState } from 'react';
-import TransferInProgress from './TransferInProgress';
-import Transfer from './Transfer';
-import { getParams } from './staging_config';
 import buildMetaport from './build_metaport';
+import TokenOptions from './pages/TokenOptions';
+import Navigation from './components/Navigation';
+import Footer from './components/Footer';
+import TransferOptions from './pages/TransferOptions';
+import { getTransfers } from './config';
+import NFTOptions from './pages/NFTOptions';
 
 function App() {
 
     const [isTransferring, setIsTransferring] = useState<boolean>(false);
     const [environment, setEnvironment] = useState<"staging" | "mainnet">("staging");
+    const [token, setToken] = useState<string>("");
+    const [nft, setNFT] = useState<"erc721" | "erc1155">("erc721");
     const [metaport, setMetaport] = useState<Metaport>(buildMetaport());
 
     useEffect(() => {
@@ -21,10 +25,26 @@ function App() {
 
     return (
         <div className="App">
-            <nav>
-                <h1>Metaport Staging Playground</h1>
-            </nav>
-            {isTransferring ? <TransferInProgress /> : (
+            <Navigation />
+            <div className="activePage">
+                {token.length === 0 && <TokenOptions {...{setToken, setNFT}} />}
+                {token.length > 0 && (
+                    <>
+                    {["SKL", "ETH", "USDC"].includes(token) ? <TransferOptions 
+                        {...{environment, metaport, token}}
+                        transferring={[isTransferring, setIsTransferring]}
+                        transfers={getTransfers(environment, token)}
+                    /> : <NFTOptions
+                            {...{environment, metaport, token}}
+                            transferring={[isTransferring, setIsTransferring]}
+                            transfers={getTransfers(environment, token)}
+                            // type={nft}
+                        />}
+                    </>
+                )}
+            </div>
+            <Footer />
+            {/* {isTransferring ? <TransferInProgress /> : (
                 <div className='buttons'>
                     <Transfer
                         {...{metaport, setIsTransferring}}
@@ -57,7 +77,7 @@ function App() {
                         chainOrder={["Europa", "Calypso"]}
                     />
                 </div>)
-            }
+            } */}
         </div>
     );
 }

@@ -39,39 +39,49 @@ export default function buildMetaport(staging = true) : Metaport {
                         }
                     }
                 },
+                'staging-utter-unripe-menkar': {
+                    'erc721': {
+                        '_TANK_0x4aaa1bb85d9339811b65566fa1aae11a8a9db28d': {
+                            name: 'TANK',
+                            address: '0xd29a08E708319bA387b5Ab6446483D55E2Ba5b6c',
+                            symbol: 'TANK', // token symbol
+                            iconUrl: '/favicon-32x32-png'
+                        }
+                    }
+                },
                 'staging-legal-crazy-castor': {
                     'erc20': { 
                         '_ETH_0xa270484784f043e159f74C03B691F80B6F6e3c24': { // wrapper token
-                            'name': 'ETH', // wrapper token display name
-                            'address': '0xa270484784f043e159f74C03B691F80B6F6e3c24', // wrapper token address
-                            'symbol': 'ETH',
-                            'iconUrl': "https://ruby.exchange/images/tokens/eth-square.jpg",
-                            'wraps': { // token that needs to be wrapped
-                                'iconUrl': "https://ruby.exchange/images/tokens/eth-square.jpg",
-                                'address': '0xD2Aaa00700000000000000000000000000000000', // unwrapped token address
-                                'symbol': 'ETHC', // unwrapped token symbol
+                            name: 'ETH', // wrapper token display name
+                            address: '0xa270484784f043e159f74C03B691F80B6F6e3c24', // wrapper token address
+                            symbol: 'ETH',
+                            iconUrl: "https://ruby.exchange/images/tokens/eth-square.jpg",
+                            wraps: { // token that needs to be wrapped
+                                iconUrl: "https://ruby.exchange/images/tokens/eth-square.jpg",
+                                address: '0xD2Aaa00700000000000000000000000000000000', // unwrapped token address
+                                symbol: 'ETHC', // unwrapped token symbol
                             }
                         },
                         "_SKL_0x6a679eF80aF3fE01A646F858Ca1e26D58b5430B6": {
-                            "name": "SKL",
-                            "symbol": "SKL",
-                            "address": "0x6a679eF80aF3fE01A646F858Ca1e26D58b5430B6",
-                            "iconUrl": 'https://ruby.exchange/images/tokens/skl-square.jpg',
-                            'wraps': { // token that needs to be wrapped
-                                'address': '0xbA1E9BA7CDd4815Da6a51586bE56e8643d1bEAb6', // unwrapped token address
-                                'symbol': 'SKL', // unwrapped token symbol
-                                "iconUrl": 'https://ruby.exchange/images/tokens/skl-square.jpg',
+                            name: "SKL",
+                            symbol: "SKL",
+                            address: "0x6a679eF80aF3fE01A646F858Ca1e26D58b5430B6",
+                            iconUrl: 'https://ruby.exchange/images/tokens/skl-square.jpg',
+                            wraps: { // token that needs to be wrapped
+                                address: '0xbA1E9BA7CDd4815Da6a51586bE56e8643d1bEAb6', // unwrapped token address
+                                symbol: 'SKL', // unwrapped token symbol
+                                iconUrl: 'https://ruby.exchange/images/tokens/skl-square.jpg',
                             }
                         },
                         "_USDC_0x4f250cCE5b8B39caA96D1144b9A32E1c6a9f97b0": {
-                            "name": "USDC",
-                            "symbol": "USDC",
-                            "address": "0x4f250cCE5b8B39caA96D1144b9A32E1c6a9f97b0",
-                            "iconUrl": 'https://ruby.exchange/images/tokens/usdc-square.jpg',
-                            'wraps': { // token that needs to be wrapped
-                                'address': '0x5d42495D417fcd9ECf42F3EA8a55FcEf44eD9B33', // unwrapped token address
-                                'symbol': 'USDC', // unwrapped token symbol
-                                "iconUrl": 'https://ruby.exchange/images/tokens/usdc-square.jpg',
+                            name: "USDC",
+                            symbol: "USDC",
+                            address: "0x4f250cCE5b8B39caA96D1144b9A32E1c6a9f97b0",
+                            iconUrl: 'https://ruby.exchange/images/tokens/usdc-square.jpg',
+                            wraps: { // token that needs to be wrapped
+                                address: '0x5d42495D417fcd9ECf42F3EA8a55FcEf44eD9B33', // unwrapped token address
+                                symbol: 'USDC', // unwrapped token symbol
+                                iconUrl: 'https://ruby.exchange/images/tokens/usdc-square.jpg',
                             }
                         }
                     }
