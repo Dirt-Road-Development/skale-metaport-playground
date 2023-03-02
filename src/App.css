@@ -1,38 +1,54 @@
 .App {
   text-align: center;
+  max-height: 100vh;
+  overflow: hidden;
+  background: black;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  height: 5vh;
+  color: seagreen;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.buttons, .transferInProgress {
+  border-top: 1px solid seagreen;
+  height: 95vh;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  color: white;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.transfer {
+  height: 25%;
+  width: 30%;
+  border: 0.125px solid seagreen;
+  border-radius: 32px;
+  color: seashell;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.transfer:hover {
+  background: seagreen;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.transfer .type {
+  position: absolute;
+  bottom: 2.5%;
+  right: 2.5%;
+}
+
+.transfer .amount {
+  position: absolute;
+  bottom: 2.5%;
+  left: 2.5%;
 }
