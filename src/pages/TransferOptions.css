@@ -1,0 +1,15 @@
+.buttons {
+
+    height: 90vh;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    color: white;
+    position: relative;
+    margin: 16px;
+  }
+  

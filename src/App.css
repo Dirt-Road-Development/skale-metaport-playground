@@ -10,17 +10,33 @@ h1 {
   color: seagreen;
 }
 
-.buttons, .transferInProgress {
+footer, nav {
+  height: 5vh;
+}
+
+footer {
+  color: grey;
+  font-size: 8px;
+}
+
+.activePage {
   border-top: 1px solid seagreen;
-  height: 95vh;
+  height: 90vh;
   width: 100%;
   background-color: black;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
   flex-wrap: wrap;
   color: white;
+  position: relative;
+}
+
+.activePage h2 {
+  position: absolute;
+  top: 2.5%;
+  left: 5%;
 }
 
 .transfer {
