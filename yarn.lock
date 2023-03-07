@@ -1976,10 +1976,10 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@skalenetwork/metaport@1.1.0-develop.4":
-  version "1.1.0-develop.4"
-  resolved "https://registry.yarnpkg.com/@skalenetwork/metaport/-/metaport-1.1.0-develop.4.tgz#9e425b61ae132d7e09c0945b695067060b3c1d08"
-  integrity sha512-D1k4Fc/+j7uLIyu5QbeWt4YDETYySsAEZen92KIlAw4bFkNfd0TPJO91lETtL/ihfXf1IhFBQSArJvpaZ6GOiA==
+"@skalenetwork/metaport@1.1.0-beta.0":
+  version "1.1.0-beta.0"
+  resolved "https://registry.yarnpkg.com/@skalenetwork/metaport/-/metaport-1.1.0-beta.0.tgz#4c97c493e96dfc094b95b73e27a458f94fc5364e"
+  integrity sha512-0g7pOUqhQ/KwOrdOWdudGQxRR/XCkViIwOmplp3BgZ9PWpuu9OGSt/ibgV27nFJyxrv//iz2Yk/WmDT0cJSBHw==
 
 "@surma/rollup-plugin-off-main-thread@^2.2.3":
   version "2.2.3"

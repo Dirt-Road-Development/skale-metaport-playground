@@ -9,7 +9,8 @@ export default function buildMetaport(staging = true) : Metaport {
             chains: [
                 'mainnet', // List of SKALE Chains that will be available in the Metaport UI (default = [])
                 'staging-legal-crazy-castor',
-                'staging-utter-unripe-menkar'
+                'staging-utter-unripe-menkar',
+                'staging-faint-slimy-achird'
             ],
             chainsMetadata: { // Chain name aliases that will be displayed in the UI (optional, defualt = {})
                 'staging-legal-crazy-castor': {
@@ -22,7 +23,12 @@ export default function buildMetaport(staging = true) : Metaport {
                     alias: 'Calypso SKALE Chain',
                     minSfuelWei: '27000000000000', // optional
                     faucetUrl: 'https://sfuel.dirtroad.dev' // optional
-                }
+                },
+                'staging-faint-slimy-achird': {
+                    alias: 'Nebula SKALE Chain',
+                    minSfuelWei: '27000000000000', // optional
+                    faucetUrl: 'https://sfuel.dirtroad.dev' // optional
+                },
             },
             tokens: {
                 'mainnet': {

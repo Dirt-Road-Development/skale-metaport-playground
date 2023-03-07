@@ -12,10 +12,20 @@ export const SKL_ETHEREUM_EUROPA: TransferParams = {
 }
 
 export const SKL_EUROPA_CALYPSO: TransferParams = {
-    amount: "0.025",
+    amount: "5",
     chains: [
         "staging-legal-crazy-castor",
         "staging-utter-unripe-menkar",
+    ],
+    tokenKeyname:`_SKL_0x6a679eF80aF3fE01A646F858Ca1e26D58b5430B6`,
+    tokenType: dataclasses.TokenType.erc20,
+}
+
+export const SKL_EUROPA_NEBULA: TransferParams = {
+    amount: "0.025",
+    chains: [
+        "staging-legal-crazy-castor",
+        "staging-faint-slimy-achird",
     ],
     tokenKeyname:`_SKL_0x6a679eF80aF3fE01A646F858Ca1e26D58b5430B6`,
     tokenType: dataclasses.TokenType.erc20,

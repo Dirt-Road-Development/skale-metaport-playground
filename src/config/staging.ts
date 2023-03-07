@@ -1,5 +1,5 @@
 import { ETH_EUROPA_CALYPSO, ETH_ETHEREUM_EUROPA, ETH_ETHEREUM_EUROPA_CALYPSO } from "./staging/erc20/eth";
-import { SKL_EUROPA_CALYPSO, SKL_ETHEREUM_EUROPA, SKL_ETHEREUM_EUROPA_CALYPSO } from "./staging/erc20/skl";
+import { SKL_EUROPA_CALYPSO, SKL_ETHEREUM_EUROPA, SKL_ETHEREUM_EUROPA_CALYPSO, SKL_EUROPA_NEBULA } from "./staging/erc20/skl";
 import { USDC_EUROPA_CALYPSO, USDC_ETHEREUM_EUROPA, USDC_ETHEREUM_EUROPA_CALYPSO } from "./staging/erc20/usdc";
 import { TANK_CALYPSO_TANK, TANK_TANK_CALYPSO } from "./staging/erc721/tank";
 
@@ -7,6 +7,7 @@ export const getStagingParms = (from: string, to: string, token?: string) => {
     if (token === "SKL") {
         if (from === "ethereum" && to === "calypso") return SKL_ETHEREUM_EUROPA_CALYPSO;
         if (from === "europa" && to === "calypso") return SKL_EUROPA_CALYPSO;
+        if (from === "europa" && to === "nebula") return SKL_EUROPA_NEBULA;
         return SKL_ETHEREUM_EUROPA;
     } else if (token === "USDC") {
         if (from === "ethereum" && to === "calypso") return USDC_ETHEREUM_EUROPA_CALYPSO;
@@ -38,6 +39,11 @@ export const getStagingTransfers = (token?: string) : any => {
         ];
     } else {
         return [
+            {
+                from: "europa",
+                to: "nebula",
+                chainOrder: ["Europa", "Nebula"]
+            },
             {
                 from: "europa",
                 to: "calypso",
