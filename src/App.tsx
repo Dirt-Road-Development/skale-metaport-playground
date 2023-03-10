@@ -12,20 +12,14 @@ import NFTOptions from './pages/NFTOptions';
 function App() {
 
     const [isTransferring, setIsTransferring] = useState<boolean>(false);
-    const [environment, setEnvironment] = useState<"staging" | "mainnet">("staging");
+    const [environment, setEnvironment] = useState<"staging" | "mainnet">(window.location.pathname.includes("staging") ? "staging": "mainnet");
     const [token, setToken] = useState<string>("");
     const [nft, setNFT] = useState<"erc721" | "erc1155">("erc721");
-    const [metaport, setMetaport] = useState<Metaport>(buildMetaport());
-
-    useEffect(() => {
-        if (!isTransferring) {
-            setMetaport(buildMetaport(environment === "staging"));
-        }
-    }, [environment])
+    const [metaport, setMetaport] = useState<Metaport>(buildMetaport(environment === "staging"));
 
     return (
         <div className="App">
-            <Navigation />
+            <Navigation {...{environment, setEnvironment}} />
             <div className="activePage">
                 {token.length === 0 && <TokenOptions {...{setToken, setNFT}} />}
                 {token.length > 0 && (
