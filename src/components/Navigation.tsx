@@ -17,8 +17,7 @@ export default function Navigation(props: Props) {
             <h1>Metaport Playground</h1>
             <button onClick={(e) => {
                 e.preventDefault();
-                w
-            }}className="network-toggle">
+            }} className="network-toggle">
                 {environment === "staging"
                     ? "Toggle to Mainnet" 
                     : "Toggle to Staging"
